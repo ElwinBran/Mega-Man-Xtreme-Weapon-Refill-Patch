@@ -1,0 +1,33 @@
+LOC    OBJ              LINE   SOURCE
+
+                        1      ; The original refill replaced with call to free space
+0BD6B0 CD6475           2      ; CALL $7564
+--------
+                        3      ; Start of the weapon and health refill routine
+                        4      ; First the copied health refill code
+0BF564 EA21D5           5      ; LD $D521, A
+                        6      ; Ready the weapon refilling code by setting the registers
+0BF567 216DD3           7      ; LD HL, $D36D
+0BF56A 3E1C             8      ; LD A, $1C
+                        9      ; Repeat these two commands 9 times to go over all the weapon energy indices and set them to the max value of 1C.
+0BF56C 22               10     ; LD (HL+), A
+0BF56D 2C               11     ; INC L
+0BF56E 22               12     ; LD (HL+), A
+0BF56F 2C               13     ; INC L
+0BF570 22               14     ; LD (HL+), A
+0BF571 2C               15     ; INC L
+0BF572 22               16     ; LD (HL+), A
+0BF573 2C               17     ; INC L
+0BF574 22               18     ; LD (HL+), A
+0BF575 2C               19     ; INC L
+0BF576 22               20     ; LD (HL+), A
+0BF577 2C               21     ; INC L
+0BF578 22               22     ; LD (HL+), A
+0BF579 2C               23     ; INC L
+0BF57A 22               24     ; LD (HL+), A
+0BF57B 2C               25     ; INC L
+0BF57C 22               26     ; LD (HL+), A
+0BF57D 2C               27     ; INC L
+                        28     ; Goes back to where the original code was interrupted (0x0BD6B0)
+0BF57E C9               29     ; RET
+
