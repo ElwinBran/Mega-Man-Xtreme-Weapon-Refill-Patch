@@ -4,7 +4,7 @@ A detailed description can be found [on the RomHacking page of this hack](http:/
 In this README you will find further information on how this patch was made and reference material.
 
 ## Tools
-- [The BGB emulator](http://bgb.bircd.org/#downloads), for disassembly, hex editing, memory viewing, testing and even breakppoints.
+- [The BGB emulator](http://bgb.bircd.org/#downloads), for disassembly, hex editing, memory viewing, testing and even breakpoints.
 - [LunarIPS](https://www.romhacking.net/utilities/240/), to create a patch file.
 
 ## Process
